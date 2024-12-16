@@ -8,15 +8,29 @@ from ..Blocker.blocker import *
 from ..Feature_Extraction.feature_extraction import *
 
 
-def add_tuple_column(df: pd.DataFrame):
+def add_tuple_column(df: pd.DataFrame) -> pd.DataFrame:
+    """Generiert Match-Tupel, die aus den Index-Spalten bestehen.
+    :param df: beinhaltet die source index spalten
+    :type df: pd.DataFrame
+
+    :return: df
+    :rtype: pd.DataFrame
+    """
     df["ID_TUPLE"] = df.apply(
         lambda row: (row["INDEX_SOURCE_DF1"], row["INDEX_SOURCE_DF2"]), axis=1
     )
     return df
 
 
-def generate_match_ids(df: pd.DataFrame):
+def generate_match_ids(df: pd.DataFrame) -> pd.DataFrame:
+    """Eine Funktion, die basierend auf den Match-Tupeln eindeutige Match-IDs generiert.
 
+    :param df: Dataframe
+    :type df:pd.DataFrame
+
+    :return: DataFrame
+    :rtype: pd.DataFrame
+    """
     G = nx.Graph()
 
     for _, row in df.iterrows():
@@ -39,12 +53,37 @@ def generate_match_ids(df: pd.DataFrame):
 def matcher(
     df1: pd.DataFrame,
     df2: pd.DataFrame,
+    street_model_path: str,
+    company_model_path: str,
     method: str = "fine-tuning",
     batch_size: int = 16,
-    street_model_path: str ,
-    company_model_path: str ,
-):
+) -> pd.DataFrame:
+    """ "Eine Matching-Funktion, die zwei DataFrames entgegennimmt und die Pfade zu den Straßen-
+    und Unternehmensmodellen verwendet, um die Einträge zu finden, die derselben realen Entität entsprechen.
+    Außerdem kann ausgewählt werden, welche Methode angewendet werden, z.B. Fine-Tuning oder Feature Extraction oder
+    wie groß die batch_size seien soll."
 
+    :param df1: erste Dataframe
+    :type df: pd.DataFrame
+
+    :param df2: zweite Dataframe
+    :type df: pd.DataFrame
+
+    :param street_model_path: Den Pfad zu den Straße Model
+    :type street_model_path: str
+
+    :param company_model_path: Den Pfad zu den Company(Firmenname) Model
+    :type company_model_path: str
+
+    :param method: welche methode soll angewendet werden, fine-tuning or feature_extraction
+    :type method: str
+
+    :param batch_size: wie groß soll die Batch_size sein
+    :type batch_size: int
+
+    :return: DataFrame
+    :rtype: pd.DataFrame
+    """
     df1 = df1[
         (
             df1["POSTALCODE"].notnull()
