@@ -1,0 +1,44 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore build and distribution directories
+build/
+bdist.win-amd64/
+dist/
+*.egg-info/
+*.egg
+
+# Ignore virtual environment directories
+venv/
+env/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore temporary or system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temp files
+*.log
+*.tmp
+
+# Ignore any lib-related build artifacts
+lib/
+
+# Ignore compiled code or extensions
+*.so
+*.dll
+*.o
+*.a
+
+# Ignore user-specific or IDE files
+*.vscode/
+.idea/
+
+# ignore the big files of the Models
+*.safetensors
+*.pt

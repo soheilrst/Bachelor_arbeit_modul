@@ -1,0 +1,65 @@
+{
+  "best_metric": 0.06258927285671234,
+  "best_model_checkpoint": "./src/Bachelor_arbeit_modul/Data/Street/model\\checkpoint-200",
+  "epoch": 0.5952380952380952,
+  "eval_steps": 100,
+  "global_step": 200,
+  "is_hyper_param_search": false,
+  "is_local_process_zero": true,
+  "is_world_process_zero": true,
+  "log_history": [
+    {
+      "epoch": 0.2976190476190476,
+      "grad_norm": 1.5882134437561035,
+      "learning_rate": 4.503968253968254e-05,
+      "loss": 0.1569,
+      "step": 100
+    },
+    {
+      "epoch": 0.2976190476190476,
+      "eval_accuracy": 0.9765625,
+      "eval_loss": 0.08126332610845566,
+      "eval_runtime": 3.9065,
+      "eval_samples_per_second": 688.09,
+      "eval_steps_per_second": 86.011,
+      "step": 100
+    },
+    {
+      "epoch": 0.5952380952380952,
+      "grad_norm": 0.21581727266311646,
+      "learning_rate": 4.007936507936508e-05,
+      "loss": 0.0787,
+      "step": 200
+    },
+    {
+      "epoch": 0.5952380952380952,
+      "eval_accuracy": 0.9840029761904762,
+      "eval_loss": 0.06258927285671234,
+      "eval_runtime": 3.962,
+      "eval_samples_per_second": 678.45,
+      "eval_steps_per_second": 84.806,
+      "step": 200
+    }
+  ],
+  "logging_steps": 100,
+  "max_steps": 1008,
+  "num_input_tokens_seen": 0,
+  "num_train_epochs": 3,
+  "save_steps": 100,
+  "stateful_callbacks": {
+    "TrainerControl": {
+      "args": {
+        "should_epoch_stop": false,
+        "should_evaluate": false,
+        "should_log": false,
+        "should_save": true,
+        "should_training_stop": false
+      },
+      "attributes": {}
+    }
+  },
+  "total_flos": 48019432012800.0,
+  "train_batch_size": 32,
+  "trial_name": null,
+  "trial_params": null
+}
