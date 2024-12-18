@@ -36,5 +36,4 @@ Das Notebook [`Test.ipynb`](Test.ipynb) enthält:
 2. Anwendung der Matcher-Funktion.
 3. Ergebnisse 
 
-👉 [Hier klicken, um das Notebook auf nbviewer anzusehen](https://nbviewer.org/github/soheilrst/Bachelor_arbeit_modul/Test.ipynb)
 
