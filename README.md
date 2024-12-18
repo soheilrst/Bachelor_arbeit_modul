@@ -9,7 +9,7 @@ Blocking- und Indexing-Methoden, um den Matching-Prozess zu optimieren.
 ## Präsentation
 Die vollständige Projektpräsentation ist hier zu finden:
 
-[für mehr Details, Hier klicken](Bachelor_arbeit_v4_repo.pdf)
+[für mehr Details, Hier klicken](Bachelor_arbeit_v4_repo.pptx)
 
 
 ## Module
