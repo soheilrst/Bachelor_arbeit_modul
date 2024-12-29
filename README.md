@@ -1,9 +1,9 @@
 # Entity-Matching-System für Firmen- und Straßennamen
-Dieses Repository stellt ein Python-Paket bereit, das für das Matching von Firmen- und Straßennamen auf Basis feinabgestimmter 
-DistilBERT-Modelle entwickelt wurde. Das System wurde entwickelt, um reale Herausforderungen wie Variationen in der Schreibweise,
-Abkürzungen (z. B. "GmbH" vs. "Gesellschaft mit beschränkter Haftung", "Str." vs. "Straße")
-sowie die Ähnlichkeit von Hausnummern zu bewältigen. Es beinhaltet zudem fortschrittliche
-Blocking- und Indexing-Methoden, um den Matching-Prozess zu optimieren.
+Dieses Repository enthält ein Python-Paket, das mithilfe feinabgestimmter DistilBERT-Modelle für das Matching 
+von Firmen- und Straßennamen entwickelt wurde.Es adressiert Herausforderungen wie Schreibvariationen, Abkürzungen
+(z. B. „GmbH“ vs. „Gesellschaft mit beschränkter Haftung“, „Str.“ vs. „Straße“) und die Ähnlichkeit
+von Hausnummern. Ergänzt wird es durch fortschrittliche Blocking- und Indexing-Methoden, 
+um den Matching-Prozess effizienter zu gestalten.
 
 
 ## Präsentation
